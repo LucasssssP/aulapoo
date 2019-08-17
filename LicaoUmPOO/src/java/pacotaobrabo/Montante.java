@@ -37,15 +37,29 @@ public class Montante extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Página Montante</title>");            
+            out.println("<title>Página Montante</title>");
+            out.println("<link rel=\"icon\" href=\"css/java.png\" type=\"ico\">");
+            /*GOOGLE FONTS*/
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=Montserrat&display=swap\" rel=\"stylesheet\">");
+            /*MAIN CSS*/
+            out.println("<link rel=\"stylesheet\" href=\"./css/main.css\">");
             out.println("</head>");
             out.println("<body>");
+            out.println("<header>\n"
+                    + "        <di class=\"navbar\">\n"
+                    + "            <div class=\"menu\">\n"
+                    + "                <a href=\"home.html\">Home</a>\n"
+                    + "                <a href=\"juros-simples.html\">Jusros Simples</a>\n"
+                    + "                <a href=\"juros-composto\">Juros composto</a>\n"
+                    + "            </div>\n"
+                    + "        </di>\n"
+                    + "    </header>");
             out.println("<h1>Montante:</h1>");
             double v1 = Double.parseDouble(request.getParameter("capital"));
             double v2 = Double.parseDouble(request.getParameter("taxaj"));
             double v3 = Double.parseDouble(request.getParameter("periodo"));
-            double r = v1*v2*v3;
-            out.println("<h2>"+v1+" X "+v2+" X "+v3+" = "+r);
+            double r = v1 * v2 * v3;
+            out.println("<h2>" + v1 + " X " + v2 + " X " + v3 + " = " + r);
             out.println("</body>");
             out.println("</html>");
         }
