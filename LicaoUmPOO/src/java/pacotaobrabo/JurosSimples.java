@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author LUCASDOSSANTOSPACHEC
  */
-@WebServlet(name = "JurosSimples", urlPatterns = {"/juro-simples.html"})
+@WebServlet(name = "JurosSimples", urlPatterns = {"/juros-simples.html"})
 public class JurosSimples extends HttpServlet {
 
     /**
@@ -37,20 +37,39 @@ public class JurosSimples extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Juro-Simples</title>");            
+            out.println("<title>Juro-Simples</title>");
+            out.println("<link rel=\"icon\" href=\"css/java.png\" type=\"ico\">");
+            /*GOOGLE FONTS*/
+            out.println("<link href=\"https://fonts.googleapis.com/css?family=Montserrat&display=swap\" rel=\"stylesheet\">");
+            /*MAIN CSS*/
+            out.println("<link rel=\"stylesheet\" href=\"./css/main.css\">");
             out.println("</head>");
             out.println("<body>");
-            out.println(" <form action=\"montante.html\" method=\"GET\">\n" +
-"            <h3>Digite o capital principal:</h3>\n" +
-"            <input type=\"text\" name=\"capital\"><br><br>\n" +
-"            <h3>Digite a taxa de juros:</h3>\n" +
-"            <input type=\"text\" name=\"taxaj\">%<br><br>\n" +
-"            <h3>Digite a quantidade de meses que o juros será aplicado:</h3>\n" +
-"            <input type=\"text\" name=\"periodo\"><br><br>\n" +
-"        <input type=\"submit\" value=\"botao para servlet do juros simples\" name=\"jusiane\">\n" +
-"        </form>");
-            
-            
+            out.println("<header>\n"
+                    + "        <di class=\"navbar\">\n"
+                    + "            <div class=\"menu\">\n"
+                    + "                <a href=\"home.html\">Home</a>\n"
+                    + "                <a href=\"juros-simples.html\">Jusros Simples</a>\n"
+                    + "                <a href=\"juros-composto\">Juros composto</a>\n"
+                    + "            </div>\n"
+                    + "        </di>\n"
+                    + "    </header>");
+            out.println("<main>\n"
+                    + "        <div class=\"formulario\">\n"
+                    + "            <h1>Juros Simples</h1>\n"
+                    + "            <div class=\"borda\"></div>\n"
+                    + "            <form action=\"montante.html\" method=\"GET\">\n"
+                    + "                <h4>Capital Inicial:</h4>\n"
+                    + "                <input type=\"text\" name=\"capital\"/>\n"
+                    + "                <h4>Taxa de juros:</h4>\n"
+                    + "                <input type=\"text\" name=\"taxaj\"/>\n"
+                    + "                <h4>Quantidade de meses:</h4>\n"
+                    + "                <input type=\"text\" name=\"periodo\"/><br>\n"
+                    + "                <input type=\"submit\" value=\"Calcular\"/>\n"
+                    + "            </form>\n"
+                    + "        </div>\n"
+                    + "    </main>");
+
             out.println("</body>");
             out.println("</html>");
         }
