@@ -46,13 +46,13 @@ public class Home extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<header>\n"
-                    + "        <di class=\"navbar\">\n"
+                    + "        <div class=\"navbar\">\n"
                     + "            <div class=\"menu\">\n"
                     + "                <a href=\"home.html\">Home</a>\n"
                     + "                <a href=\"juros-simples.html\">Jusros Simples</a>\n"
-                    + "                <a href=\"juros-composto\">Juros composto</a>\n"
+                    + "                <a href=\"juros-composto.html\">Juros composto</a>\n"
                     + "            </div>\n"
-                    + "        </di>\n"
+                    + "        </div>\n"
                     + "    </header>\n"
                     + "    <main>\n"
                     + "        <div class=\"team\">\n"

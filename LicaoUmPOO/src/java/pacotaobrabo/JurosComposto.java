@@ -15,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author LUCASDOSSANTOSPACHEC
+ * @author giova
  */
-@WebServlet(name = "JurosSimples", urlPatterns = {"/juros-simples.html"})
-public class JurosSimples extends HttpServlet {
+@WebServlet(name = "JurosComposto", urlPatterns = {"/juros-composto.html"})
+public class JurosComposto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,7 +37,7 @@ public class JurosSimples extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Juro-Simples</title>");
+            out.println("<title>Juros Composto</title>");
             out.println("<link rel=\"icon\" href=\"css/java.png\" type=\"ico\">");
             /*GOOGLE FONTS*/
             out.println("<link href=\"https://fonts.googleapis.com/css?family=Montserrat&display=swap\" rel=\"stylesheet\">");
@@ -56,13 +56,13 @@ public class JurosSimples extends HttpServlet {
                     + "    </header>");
             out.println("<main>\n"
                     + "        <div class=\"formulario\">\n"
-                    + "            <h1>Juros Simples</h1>\n"
+                    + "            <h1>Juros Composto</h1>\n"
                     + "            <div class=\"borda\"></div>\n"
-                    + "            <form action=\"montante.html\" method=\"GET\">\n"
+                    + "            <form action=\"calcula-composto.html\" method=\"GET\">\n"
                     + "                <h4>Capital Inicial:</h4>\n"
                     + "                <input type=\"text\" name=\"capital\"/>\n"
                     + "                <h4>Taxa de juros:</h4>\n"
-                    + "                <input type=\"text\" name=\"taxaj\"/>\n"
+                    + "                <input type=\"text\" name=\"taxa\"/>\n"
                     + "                <h4>Quantidade de meses:</h4>\n"
                     + "                <input type=\"text\" name=\"periodo\"/><br>\n"
                     + "                <input type=\"submit\" value=\"Calcular\"/>\n"

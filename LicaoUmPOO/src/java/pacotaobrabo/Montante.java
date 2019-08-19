@@ -50,16 +50,21 @@ public class Montante extends HttpServlet {
                     + "            <div class=\"menu\">\n"
                     + "                <a href=\"home.html\">Home</a>\n"
                     + "                <a href=\"juros-simples.html\">Jusros Simples</a>\n"
-                    + "                <a href=\"juros-composto\">Juros composto</a>\n"
+                    + "                <a href=\"juros-composto.html\">Juros composto</a>\n"
                     + "            </div>\n"
                     + "        </di>\n"
                     + "    </header>");
-            out.println("<h1>Montante:</h1>");
             double v1 = Double.parseDouble(request.getParameter("capital"));
             double v2 = Double.parseDouble(request.getParameter("taxaj"));
             double v3 = Double.parseDouble(request.getParameter("periodo"));
             double r = v1 * v2 * v3;
-            out.println("<h2>" + v1 + " X " + v2 + " X " + v3 + " = " + r);
+
+            out.println("<div class=\"result\"><br><br><br>\n"
+                    + "        <h1>Resultado Juros Simples</h1>\n"
+                    + "            <div class=\"borda\"></div>\n"
+                    + "            \n"
+                    + "<h2>" + v1 + " X " + v2 + " X " + v3 + " = " + r + "</h2\n"
+                    + "    </div>");
             out.println("</body>");
             out.println("</html>");
         }
