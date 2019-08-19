@@ -173,7 +173,7 @@ ul, ol {
     text-align: center;
     padding: 100px 0;
 }
-.formulario, input[type="submit"]{
+.formulario input[type="submit"]{
     background-color:#3498db;
     cursor:pointer;
     color:white;
@@ -183,15 +183,47 @@ ul, ol {
     outline:none;
     margin: 10px 30px;
 }
-.formulario, input[type="submit"]:hover{
+.formulario input[type="submit"]:hover{
     background-color:#2980b9;
     cursor:pointer;
 }
-.formulario, input[type="text"]{
+.formulario input[type="text"]{
     cursor:pointer;
     padding:10px 20px;
     border-radius: 5px;
     border:none;
     transition: 0.3s;
     margin: 5px 15px;
+}
+.table-box{
+    margin: 20px auto;
+}
+.table-row{
+    display: table;
+    width: 60%;
+    margin: 5px auto;
+    font-family: sans-serif;
+    background: transparent;
+    padding: 5px 0;
+    color: #555;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,50,0.3);
+}
+.table-cell{
+    display: table-cell;
+    width: 30%;
+    text-align: center;
+    padding: 2px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+}
+.table-head{
+    background: #3498db;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+}
+.result{
+    text-align: center;
+    padding: 100px 0;
 }
